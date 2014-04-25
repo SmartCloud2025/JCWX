@@ -5,10 +5,10 @@ using System.Text;
 using System.Xml.Linq;
 using WX.Model;
 
-namespace WX.Business
+namespace WX.Framework
 {
     public interface IMessageHandler
     {
-        ResponseMessage HandlerRequestMessage(XElement xml);
+        ResponseMessage HandlerRequestMessage(MiddleMessage message);
     }
 }
