@@ -26,7 +26,7 @@ namespace FrameworkCoreTest
 
         protected Mock<DefaultApiClient> mock_client = new Mock<DefaultApiClient>();
 
-        public string GetCurrentToken()
+        public virtual string GetCurrentToken()
         {
             if (File.Exists(tokenfile))
             {
@@ -50,7 +50,7 @@ namespace FrameworkCoreTest
 
         private string GetToken()
         {
-            var token = ApiAccessTokenManager.Instance.GetCurrentToken();
+            var token = GetCurrentToken();
             var expirtime = ApiAccessTokenManager.Instance.ExpireTime;
             File.WriteAllText(tokenfile, token + "|" + expirtime.ToString(), Encoding.UTF8);
 

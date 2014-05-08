@@ -20,6 +20,6 @@ namespace WX.Model
             get { return Model.MsgType.Image; }
         }
 
-        public string MediaId { get; set; }
+        public ImageMessage Image { get; set; }
     }
 }

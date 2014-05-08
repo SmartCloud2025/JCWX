@@ -20,14 +20,8 @@ namespace WX.Model
             get { return Model.MsgType.Music; }
         }
 
-        public string Title { get; set; }
-
-        public string Description { get; set; }
-
-        public string MusicURL { get; set; }
-
-        public string HQMusicUrl { get; set; }
-
-        public string ThumbMediaId { get; set; }
+        public MusicMessage Music { get; set; }
     }
+
+    
 }

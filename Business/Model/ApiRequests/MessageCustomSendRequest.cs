@@ -7,10 +7,13 @@ using WX.Model.ApiResponses;
 
 namespace WX.Model.ApiRequests
 {
-    public class MediaUploadNewsRequest : ApiRequest<MediaUploadNewsResponse>
+    public abstract class MessageCustomSendRequest : ApiRequest<MessageCustomSendResponse>
     {
-        [JsonProperty("articles")]
-        public IEnumerable<ArticleMessage> Articles { get; set; }
+        [JsonProperty("touser")]
+        public string ToUser { get; set; }
+
+        [JsonProperty("msgtype")]
+        public abstract string MsgType { get; }
 
         internal override string Method
         {
@@ -19,7 +22,7 @@ namespace WX.Model.ApiRequests
 
         protected override string UrlFormat
         {
-            get { return "https://api.weixin.qq.com/cgi-bin/media/uploadnews?access_token={0}"; }
+            get { return "https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token={0}"; }
         }
 
         internal override string GetUrl()
@@ -34,7 +37,7 @@ namespace WX.Model.ApiRequests
 
         public override string GetPostContent()
         {
-            return JsonConvert.SerializeObject(this);
+            return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
     }
 }

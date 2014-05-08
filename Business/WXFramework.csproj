@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiAccessTokenManager.cs" />
+    <Compile Include="Common\HttpHelper.cs" />
     <Compile Include="IMessageHandler.cs" />
     <Compile Include="IMessageRole.cs" />
     <Compile Include="Model\ApiRequests\AccessTokenRequest.cs" />
@@ -62,10 +63,19 @@
     <Compile Include="Model\ApiRequests\GroupsMembersUpdateRequest.cs" />
     <Compile Include="Model\ApiRequests\GroupsQueryRequest.cs" />
     <Compile Include="Model\ApiRequests\GroupsUpdateRequest.cs" />
+    <Compile Include="Model\ApiRequests\MediaGetRequest.cs" />
     <Compile Include="Model\ApiRequests\MediaUploadNewsRequest.cs" />
+    <Compile Include="Model\ApiRequests\MediaUploadRequest.cs" />
     <Compile Include="Model\ApiRequests\MenuCreateRequest.cs" />
     <Compile Include="Model\ApiRequests\MenuDeleteRequest.cs" />
     <Compile Include="Model\ApiRequests\MenuGetRequest.cs" />
+    <Compile Include="Model\ApiRequests\MessageCustomSendImageRequest.cs" />
+    <Compile Include="Model\ApiRequests\MessageCustomSendMusicRequest.cs" />
+    <Compile Include="Model\ApiRequests\MessageCustomSendNewsRequest.cs" />
+    <Compile Include="Model\ApiRequests\MessageCustomSendRequest.cs" />
+    <Compile Include="Model\ApiRequests\MessageCustomSendTextRequest.cs" />
+    <Compile Include="Model\ApiRequests\MessageCustomSendVideoRequest.cs" />
+    <Compile Include="Model\ApiRequests\MessageCustomSendVoiceRequest.cs" />
     <Compile Include="Model\ApiRequests\MessageMassDeleteRequest.cs" />
     <Compile Include="Model\ApiRequests\MessageMassSendAllRequest.cs" />
     <Compile Include="Model\ApiRequests\MessageMassSendRequest.cs" />
@@ -81,10 +91,13 @@
     <Compile Include="Model\ApiResponses\GroupsMembersUpdateResponse.cs" />
     <Compile Include="Model\ApiResponses\GroupsQueryResponse.cs" />
     <Compile Include="Model\ApiResponses\GroupsUpdateResponse.cs" />
+    <Compile Include="Model\ApiResponses\MediaGetResponse.cs" />
     <Compile Include="Model\ApiResponses\MediaUploadNewsResponse.cs" />
+    <Compile Include="Model\ApiResponses\MediaUploadResponse.cs" />
     <Compile Include="Model\ApiResponses\MenuCreateResponse.cs" />
     <Compile Include="Model\ApiResponses\MenuDeleteResponse.cs" />
     <Compile Include="Model\ApiResponses\MenuGetResponse.cs" />
+    <Compile Include="Model\ApiResponses\MessageCustomSendResponse.cs" />
     <Compile Include="Model\ApiResponses\MessageMassDeleteResponse.cs" />
     <Compile Include="Model\ApiResponses\MessageMassSendResponse.cs" />
     <Compile Include="Model\ApiResponses\MessageMassSendAllResponse.cs" />
@@ -95,6 +108,7 @@
     <Compile Include="Model\ClickButton.cs" />
     <Compile Include="Model\Exceptions\WXApiException.cs" />
     <Compile Include="Model\Group.cs" />
+    <Compile Include="Model\PublicMessage.cs" />
     <Compile Include="Model\MiddleMessage.cs" />
     <Compile Include="Model\Request\RequestClickEventMessage.cs" />
     <Compile Include="Model\Request\RequestEventMessage.cs" />
@@ -108,7 +122,6 @@
     <Compile Include="Model\Request\RequestTextMessage.cs" />
     <Compile Include="Model\Request\RequestVideoMessage.cs" />
     <Compile Include="Model\Request\RequestVoiceMessage.cs" />
-    <Compile Include="Model\Response\Article.cs" />
     <Compile Include="Model\Response\ResponseImageMessage.cs" />
     <Compile Include="Model\Response\ResponseMessage.cs" />
     <Compile Include="Model\Response\ResponseMusicMessage.cs" />

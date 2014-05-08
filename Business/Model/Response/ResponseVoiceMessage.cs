@@ -19,6 +19,8 @@ namespace WX.Model
             get { return Model.MsgType.Voice; }
         }
 
-        public string MediaId { get; set; }
+        public VoiceMessage Voice { get; set; }
     }
+
+    
 }

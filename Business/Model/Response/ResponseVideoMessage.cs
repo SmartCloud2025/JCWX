@@ -19,8 +19,8 @@ namespace WX.Model
             get { return Model.MsgType.Video; }
         }
 
-        public string MediaId { get; set; }
-
-        public string ThumbMediaId { get; set; }
+        public VideoMessage Video { get; set; }
     }
+
+    
 }
