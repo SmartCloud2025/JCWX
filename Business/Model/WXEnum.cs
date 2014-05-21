@@ -25,7 +25,8 @@ namespace WX.Model
         Scan,
         Location,
         Click,
-        MASSSENDJOBFINISH
+        MASSSENDJOBFINISH,
+        View
     }
 
     public enum MediaType
@@ -34,5 +35,18 @@ namespace WX.Model
         Voice,
         Video,
         Thumb
+    }
+
+    public enum OAuthScope
+    {
+        Base,
+        UserInfo
+    }
+
+    public enum Language
+    {
+        CN,
+        TW,
+        EN
     }
 }

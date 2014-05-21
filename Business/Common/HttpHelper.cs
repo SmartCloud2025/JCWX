@@ -6,13 +6,11 @@ using System.Linq;
 using System.Net;
 using System.Text;
 
-namespace WX.Framework.Common
+namespace WX.Common
 {
     public static class HttpHelper
     {
-        public static string HttpUploadFile(
-            string url,
-            string file)
+        public static string HttpUploadFile(string url, string file)
         {
             if (!File.Exists(file))
             {
@@ -100,8 +98,7 @@ namespace WX.Framework.Common
 
         public static string HttpGet(string url)
         {
-            HttpWebRequest req = HttpWebRequest.Create(url)
-                     as HttpWebRequest;
+            HttpWebRequest req = HttpWebRequest.Create(url) as HttpWebRequest;
 
             if (req == null)
                 throw new ArgumentException();
@@ -139,17 +136,17 @@ namespace WX.Framework.Common
             stream.Close();
 
             HttpWebResponse res = (HttpWebResponse)req.GetResponse();
-            if (res.StatusCode !=  HttpStatusCode.OK)
+            if (res.StatusCode != HttpStatusCode.OK)
                 throw new WebException("code" + res.StatusCode);
-            
-            
+
+
             using (var rstream = res.GetResponseStream())
             using (var reader = new System.IO.StreamReader(rstream, Encoding.UTF8))
             {
                 var result = reader.ReadToEnd();
                 reader.Close();
                 rstream.Close();
-                
+
                 //res.Close();
                 return result;
             }
